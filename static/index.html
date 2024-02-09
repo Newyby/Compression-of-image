@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Image Compressor</h1>
     <form action="/compress" method="post" enctype="multipart/form-data">
         <input type="file" name="image" accept="image/*">
         <input type="submit" value="Compress Image">
+	<button class="compressButton" type="button" onclick="compressImage()">Compress 
     </form>
 </body>
 </html>
