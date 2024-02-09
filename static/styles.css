@@ -34,12 +34,13 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #3e8e41;
 }
-.compressButton {
-  background-color: #00FF00;
+compressButton {
+  background-color: #00Ff00;
   color: Green;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  }
+}
+
 
