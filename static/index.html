@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="/static/styles.css">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <h1>Image Compressor</h1>
-    <form action="/compress" method="post" enctype="multipart/form-data">
+    <form id="compressForm" action="/compress" method="post" enctype="multipart/form-data">
         <input type="file" name="image" accept="image/*">
-        <input type="submit" value="Compress Image">
-	<button class="compressButton" type="button" onclick="compressImage()">Compress Image</button>
+        <button class="compressButton" type="button" onclick="compressImage()">Compress Image</button>
     </form>
+
+    <script>
+        function compressImage() {
+            const form = document.getElementById('compressForm');
+            const formData = new FormData(form);
+
+            fetch('/compress', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    alert('Image compressed successfully!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error compressing image. Please try again.');
+                });
+        }
+    </script>
 </body>
+
 </html>
+
