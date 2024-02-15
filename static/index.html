@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <!-- Include the stylesheet for styling -->
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Image Compressor</h1>
+    <!-- Form for uploading an image and submitting for compression -->
     <form action="/compress" method="post" enctype="multipart/form-data">
+        <!-- Input field for selecting an image file -->
         <input type="file" name="image" accept="image/*">
-	<input type="submit" value="Compress Image">
-	<button class="compressButton" type="button"> 
+        <!-- Button to submit the form and compress the image -->
+        <input type="submit" value="Compress Image">
+        <!-- Button for compressing the image using JavaScript -->
+        <button class="compressButton" type="button">Compress Image (JavaScript)</button>
     </form>
 </body>
 </html>
+
