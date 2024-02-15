@@ -29,18 +29,11 @@ input[type=submit] {
   text-decoration: none;
    cursor: pointer;
 }
-.compressButton {
-  background-color: #00FF00;
 compressButton {
-  background-color: #00Ff00;
+  background-color: #00FF00;
   color: Green;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
-  }
-
 }
-
-
