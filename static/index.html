@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- Include the stylesheet for styling -->
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
+
 <body>
-    <h1>Image Compressor</h1>
-    <!-- Form for uploading an image and submitting for compression -->
-    <form action="/compress" method="post" enctype="multipart/form-data">
-        <!-- Input field for selecting an image file -->
-        <input type="file" name="image" accept="image/*">
-        <!-- Button to submit the form and compress the image -->
-        <input type="submit" value="Compress Image">
-        <!-- Button for compressing the image using JavaScript -->
-        <button class="compressButton" type="button">Compress Image (JavaScript)</button>
+    <h1>Image Compressor</h1> <!-- Heading for the page -->
+    <form id="compressForm" action="/compress" method="post" enctype="multipart/form-data">
+        <!-- Form for uploading and compressing images -->
+        <input type="file" name="image" accept="image/*"> <!-- Input field for selecting an image file -->
+        <button class="compressButton" type="button" onclick="compressImage()">Compress Image</button>
+        <!-- Button to trigger image compression -->
     </form>
+
+    <script>
+        function compressImage() {
+            // Function to handle image compression
+            const form = document.getElementById('compressForm'); // Get the form element
+            const formData = new FormData(form); // Create a FormData object to store form data
+
+            // Send a POST request to the server for image compression
+            fetch('/compress', {
+                    method: 'POST', // Specify the HTTP method
+                    body: formData // Pass the FormData object as the request body
+                })
+                .then(response => response.json()) // Parse the JSON response from the server
+                .then(data => {
+                    console.log(data); // Log the response data to the console
+                    alert('Image compressed successfully!'); // Display a success message to the user
+                })
+                .catch(error => {
+                    console.error('Error:', error); // Log any errors to the console
+                    alert('Error compressing image. Please try again.'); // Display an error message to the user
+                });
+        }
+    </script>
 </body>
+
 </html>
 
