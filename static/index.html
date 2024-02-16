@@ -1,42 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to external stylesheet -->
 </head>
-
 <body>
-    <h1>Image Compressor</h1> <!-- Heading for the page -->
-    <form id="compressForm" action="/compress" method="post" enctype="multipart/form-data">
-        <!-- Form for uploading and compressing images -->
+    <h1>Image Compressor</h1> <!-- Heading -->
+    <form action="/compress" method="post" enctype="multipart/form-data"> <!-- Form for uploading and compressing images -->
         <input type="file" name="image" accept="image/*"> <!-- Input field for selecting an image file -->
-        <button class="compressButton" type="button" onclick="compressImage()">Compress Image</button>
-        <!-- Button to trigger image compression -->
+        <input type="submit" value="Compress Image"> <!-- Submit button to initiate image compression -->
     </form>
-
-    <script>
-        function compressImage() {
-            // Function to handle image compression
-            const form = document.getElementById('compressForm'); // Get the form element
-            const formData = new FormData(form); // Create a FormData object to store form data
-
-            // Send a POST request to the server for image compression
-            fetch('/compress', {
-                    method: 'POST', // Specify the HTTP method
-                    body: formData // Pass the FormData object as the request body
-                })
-                .then(response => response.json()) // Parse the JSON response from the server
-                .then(data => {
-                    console.log(data); // Log the response data to the console
-                    alert('Image compressed successfully!'); // Display a success message to the user
-                })
-                .catch(error => {
-                    console.error('Error:', error); // Log any errors to the console
-                    alert('Error compressing image. Please try again.'); // Display an error message to the user
-                });
-        }
-    </script>
-</body>
-
-</html>
-

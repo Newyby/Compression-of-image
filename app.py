@@ -4,32 +4,29 @@ from io import BytesIO
 
 app = Flask(__name__)
 
-# Route for serving the index.html file
+# Route for the index page
 @app.route('/')
 def index():
+    # Send the static file named 'index.html' as the response
     return app.send_static_file('index.html')
 
-# Route for handling image compression
+# Route for compressing images
 @app.route('/compress', methods=['POST'])
 def compress():
     # Get the image file from the request
     image = request.files['image']
-    
     # Open the image using PIL
     picture = Image.open(image)
-    
-    # Create a BytesIO object to hold the compressed image
+    # Create a BytesIO object to store the compressed image
     img_io = BytesIO()
-    
-    # Compress the image and save it to the BytesIO object
+    # Save the image to the BytesIO object as a JPEG with optimization and specified quality
     picture.save(img_io, 'JPEG', optimize=True, quality=30)
-    
-    # Reset the file pointer of the BytesIO object to the beginning
+    # Seek to the beginning of the BytesIO object
     img_io.seek(0)
-    
-    # Send the compressed image file back to the client as an attachment
+    # Return the compressed image file as a response
     return send_file(img_io, mimetype='image/jpeg', as_attachment=True, download_name='compressed.jpg')
 
+# Run the Flask app if this script is executed directly
 if __name__ == '__main__':
     app.run()
 
