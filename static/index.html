@@ -1,15 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Defines the document type -->
 <html>
-<head>
-    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to external stylesheet -->
-</head>
-<body>
-    <h1>Image Compressor</h1>
-    <form action="/compress" method="post" enctype="multipart/form-data">
-        <input type="file" name="image" accept="image/*">
-	<input type="submit" value="Compress Image">
-	<button class="compressButton" type="button"> 
-    <h1>Image Compressor</h1> <!-- Heading -->
-    <form action="/compress" method="post" enctype="multipart/form-data"> <!-- Form for uploading and compressing images -->
+  <head>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to an external stylesheet -->
+  </head>
+  <body>
+    <h1>Image Compressor</h1> <!-- Heading for the page -->
+    <form action="/compress" method="post" enctype="multipart/form-data"> <!-- Form for uploading an image -->
         <input type="file" name="image" accept="image/*"> <!-- Input field for selecting an image file -->
+        <input type="submit" value="Compress Image"> <!-- Submit button to trigger image compression -->
     </form>
+  </body>
+</html>
+

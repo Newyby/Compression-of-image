@@ -1,47 +1,37 @@
-/* Global Styles */
 body {
   font-family: Arial, sans-serif; /* Set the font family for the entire page */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
 }
 
-/* Header Styles */
 h1 {
-  background-color: #4CAF50; /* Set background color for the header */
-  color: white; /* Set text color for the header */
-  margin: 0; /* Remove margin */
-  padding: 20px; /* Add padding to the header */
+  background-color: #4CAF50; /* Set background color for h1 element */
+  color: white; /* Set text color */
+  margin: 0; /* Remove default margin */
+  padding: 20px; /* Add padding around the heading */
 }
 
-/* Form Styles */
 form {
-  display: flex; /* Display form elements in a flex container */
-  flex-direction: column; /* Arrange form elements vertically */
-  align-items: center; /* Center form elements horizontally */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange form elements in a column */
+  align-items: center; /* Center align form elements */
   margin-top: 20px; /* Add margin to the top of the form */
 }
 
-/* Input Styles */
 input[type=file] {
   margin-bottom: 20px; /* Add margin below file input */
 }
 
-/* Submit Button Styles */
 input[type=submit] {
-  background-color: #4CAF50; /* Set background color for the submit button */
+  background-color: #4CAF50; /* Set background color for submit button */
   border: none; /* Remove border */
-  color: white; /* Set text color for the submit button */
-  padding: 12px 20px; /* Add padding to the submit button */
-  text-decoration: none; /* Remove underline */
+  color: white; /* Set text color */
+  padding: 12px 20px; /* Add padding */
+  text-decoration: none; /* Remove default text decoration */
   cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-/* Custom Button Styles */
-.compressButton {
-  background-color: #00FF00; /* Set background color for the custom button */
-  color: green; /* Set text color for the custom button */
-  padding: 10px 20px; /* Add padding to the custom button */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Add border radius */
-  cursor: pointer; /* Change cursor to pointer on hover */
+input[type=submit]:hover {
+  background-color: #3e8e41; /* Change background color on hover */
 }
+
