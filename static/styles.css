@@ -28,21 +28,6 @@ input[type=file] {
 
 /* Submit Button Styles */
 input[type=submit] {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 12px 20px;
-  text-decoration: none;
-   cursor: pointer;
-}
-compressButton {
-  background-color: #00Ff00;
-  color: Green;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
   background-color: #4CAF50; /* Set background color for the submit button */
   border: none; /* Remove border */
   color: white; /* Set text color for the submit button */
