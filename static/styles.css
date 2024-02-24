@@ -1,26 +1,32 @@
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif; /* Set the font family for the entire page */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
+/* Header Styles */
 h1 {
-  background-color: #4CAF50;
-  color: white;
-  margin: 0;
-  padding: 20px;
+  background-color: #4CAF50; /* Set background color for the header */
+  color: white; /* Set text color for the header */
+  margin: 0; /* Remove margin */
+  padding: 20px; /* Add padding to the header */
 }
 
+/* Form Styles */
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-input[type=file] {
-  margin-bottom: 20px;
+  display: flex; /* Display form elements in a flex container */
+  flex-direction: column; /* Arrange form elements vertically */
+  align-items: center; /* Center form elements horizontally */
+  margin-top: 20px; /* Add margin to the top of the form */
 }
 
+/* Input Styles */
+input[type=file] {
+  margin-bottom: 20px; /* Add margin below file input */
+}
+
+/* Submit Button Styles */
 input[type=submit] {
   background-color: #4CAF50;
   border: none;
@@ -37,5 +43,20 @@ compressButton {
   border-radius: 5px;
   cursor: pointer;
 }
+  background-color: #4CAF50; /* Set background color for the submit button */
+  border: none; /* Remove border */
+  color: white; /* Set text color for the submit button */
+  padding: 12px 20px; /* Add padding to the submit button */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
 
-
+/* Custom Button Styles */
+.compressButton {
+  background-color: #00FF00; /* Set background color for the custom button */
+  color: green; /* Set text color for the custom button */
+  padding: 10px 20px; /* Add padding to the custom button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}

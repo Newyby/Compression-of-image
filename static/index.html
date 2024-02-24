@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="/static/styles.css">
+<head>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to external stylesheet -->
 </head>
 <body>
     <h1>Image Compressor</h1>
@@ -9,6 +9,8 @@
         <input type="file" name="image" accept="image/*">
 	<input type="submit" value="Compress Image">
 	<button class="compressButton" type="button"> 
+    <h1>Image Compressor</h1> <!-- Heading -->
+    <form action="/compress" method="post" enctype="multipart/form-data"> <!-- Form for uploading and compressing images -->
+        <input type="file" name="image" accept="image/*"> <!-- Input field for selecting an image file -->
+        <input type="submit" value="Compress Image"> <!-- Submit button to initiate image compression -->
     </form>
-</body>
-</html>
